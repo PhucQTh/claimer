@@ -8,4 +8,4 @@ services:
         volumes:
             - quackquack:/app
 volumes:
-    acca:
+    quackquack:
