@@ -6,6 +6,6 @@
 
 > Video hướng dẫn https://www.tiktok.com/@mhqb365/video/7373837354257091857
 
-> Mọi người có hứng thú với con game vô tri này thì đăng ký qua link ủng hộ tui nhé: https://t.me/quackquack_game_bot?start=6hn8Xrp7DK
+> Mọi người có hứng thú với con game vô tri này thì đăng ký qua link ủng hộ tui nhé https://t.me/quackquack_game_bot?start=6hn8Xrp7DK
 
 From https://mhqb365.com with ♥
