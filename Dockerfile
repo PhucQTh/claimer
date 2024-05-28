@@ -13,4 +13,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8180
-CMD [ "npm", "run", "prod" ]
+CMD [ "npm", "run", "start" ]
