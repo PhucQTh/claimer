@@ -1,0 +1,11 @@
+version: '1'
+services:
+    quackquack:
+        build:
+            context: .
+        container_name: quackquack
+        restart: always
+        volumes:
+            - quackquack:/app
+volumes:
+    acca:
