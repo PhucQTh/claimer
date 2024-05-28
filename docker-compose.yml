@@ -1,4 +1,4 @@
-version: '1'
+version: '2'
 services:
     quack-claimer:
         build:
@@ -8,6 +8,6 @@ services:
             - '8180:4000' # map 80 in container => 3000 in local
         restart: always
         volumes:
-            - quack-claimer-data:/app
+            - claimer:/app
 volumes:
-    quack-claimer-data:
+    claimer:
