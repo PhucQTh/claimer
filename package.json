@@ -1,0 +1,14 @@
+{
+    "name": "quack-quack-game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "quack.js",
+    "scripts": {
+        "start": "node quack.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.19.2"
+    }
+}

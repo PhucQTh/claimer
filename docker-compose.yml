@@ -1,11 +1,13 @@
 version: '1'
 services:
-    quackquack:
+    quack-claimer:
         build:
             context: .
-        container_name: quackquack
+        container_name: quack-claimer
+        ports:
+            - '8180:4000' # map 80 in container => 3000 in local
         restart: always
         volumes:
-            - quackquack:/app
+            - quack-claimer-data:/app
 volumes:
-    quackquack:
+    quack-claimer-data:

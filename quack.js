@@ -73,10 +73,7 @@ async function getListCollectEgg() {
         if (data.error_code !== '') console.log(data.error_code);
         data.data.duck && (listDuck = data.data.duck);
         // console.log(data.data.nest);
-        data.data.nest.map((item) => {
-            // console.log(item);
-            if (item.type_egg) listColect.push(item);
-        });
+        listColect = data.data.nest.filter((item) => item.type_egg);
 
         let eggs = listColect.map((i) => i.id);
 
@@ -132,9 +129,7 @@ function getDuckToLay() {
     listDuck.forEach((duck) => {
         if (duck.last_active_time < now) now = duck.last_active_time;
     });
-    listDuck.map((item) => {
-        if (item.last_active_time === now) duck = item;
-    });
+    duck = listDuck.find((item) => item.last_active_time === now);
 
     return duck;
 }
@@ -177,8 +172,6 @@ async function layEgg(egg, duck) {
         }, 3e3);
     }
 }
-
-getGoldDuckInfo().then(getTotalEgg);
 
 setInterval(() => console.clear(), 3e5);
 
@@ -288,3 +281,16 @@ async function claimGoldDuck(gDuck) {
         setTimeout(claimGoldDuck, 3e3);
     }
 }
+
+const express = require('express');
+const app = express();
+const port = 4000;
+
+app.get('/get-rewards', (req, res) => {
+    res.send(listReward);
+});
+
+app.listen(port, () => {
+    console.log(`Server listening at http://localhost:${port}`);
+    getGoldDuckInfo().then(getTotalEgg);
+});
